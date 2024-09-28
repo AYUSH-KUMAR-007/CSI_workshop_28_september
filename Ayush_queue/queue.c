@@ -12,13 +12,13 @@ struct queue
 // Function to check if the queue is empty
 int isEmpty(struct queue *q)
 {
-    return (q->f=q->r-1);
+    return (q->f==q->r-1)||(q->r==-1&&q->f==-1);
 }
 
 // Function to check if the queue is full
 int isFull(struct queue *q) 
 {
-    return q->r == q->size - 1;
+    return (q->r == q->size - 1);
 }
 
 // Function to add an element to the queue
